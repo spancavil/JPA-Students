@@ -1,0 +1,21 @@
+Antes que nada tenemos que bajarnos una plantilla desde spring.io, donde seleccionaremos todas las dependencias que
+utilizará el proyecto.
+Luego cuando abrimos el proyecto de Maven, se autoinstalan las dependencias que diga el pom.xml (que es como el
+package.json).
+
+Configuración de application properties para conectarse con MySql
+
+#server.port=9120 Se puede cambiar el puerto 8080 que viene por default
+#Data source :
+spring.datasource.url=jdbc:mysql://localhost:3306/Coderhouse?useSSL=false
+spring.datasource.username=root
+spring.datasource.password=2ASH8A.MVV217aJrmHQ-
+spring.jpa.generate-ddl=true
+
+#Jpa/Hibernate :
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
+spring.jpa.hibernate.ddl-auto = update
+
+Layers
+Controller => Service => Repository => El repository tiene como modelo la clase correspondiente (en este caso Student)
